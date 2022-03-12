@@ -11,13 +11,11 @@ var findMaxAverage = function(nums, k) {
   }
   
   let max = sum
-  let l = 0;
   let r = k
   
   while (r < nums.length) {
-    sum = sum - (nums[l]) + (nums[r])
+    sum = sum - (nums[r-k]) + (nums[r])
     max = Math.max(max, sum)
-    l++
     r++
   }
   
