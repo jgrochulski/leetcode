@@ -11,10 +11,7 @@ var searchInsert = function(nums, target) {
   
   while (max >= min) {
     mid = Math.floor((max + min) / 2);
-    console.log("mid: " + mid);
-    console.log("");
     if (target == nums[mid]) {
-      // console.log("index1: " + mid)
       return mid
     }
     else if (target < nums[mid]) {
@@ -23,13 +20,6 @@ var searchInsert = function(nums, target) {
     else {
       min = mid + 1;
     }
-    
-    // console.log("min: " + min);
-    // console.log("max: " + max);
-
   }
-  // console.log("nums[mid]: " + nums[mid])
-  // console.log(`index2: ${mid + 1}`)
   return max + 1
-
 };
