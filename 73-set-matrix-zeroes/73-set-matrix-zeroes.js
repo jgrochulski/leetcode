@@ -18,8 +18,6 @@ var setZeroes = function(matrix) {
     }
   }
   
-  // console.log(matrix)
-  
   for (let i = rows - 1; i >= 0; i--) {
     for (let j = cols - 1; j > 0; j--) {
       if (matrix[i][0] == 0 || matrix[0][j] == 0) {
