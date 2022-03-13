@@ -3,7 +3,6 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 var setZeroes = function(matrix) {
-  // console.log(matrix)
   
   const R = matrix.length
   const C = matrix[0].length
