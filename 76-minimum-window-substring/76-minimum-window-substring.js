@@ -33,8 +33,8 @@ var minWindow = function(s, t) {
     
     while (l <= r && check == req) {
       const char = s[l]
-      if (ans[0] == -1 || r - l + 1 < ans[0]) { // wtf?
-        ans[0] = r - l + 1
+      if (ans[0] == -1 || r - l + 1 < ans[0]) { // if there is no solution set yet,
+        ans[0] = r - l + 1                      // or if the current substring is shorter than the  solution
         ans[1] = l
         ans[2] = r
       }
