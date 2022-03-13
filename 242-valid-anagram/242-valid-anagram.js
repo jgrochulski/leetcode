@@ -9,7 +9,7 @@ var isAnagram = function(s, t) {
   
   const sMap = new Map()
   const tMap = new Map()
-  let ans = true;
+  // let ans = true;
   
   for (let i = 0; i < t.length; i++) {
     const tCount = tMap.has(t[i]) ? tMap.get(t[i]) : 0
@@ -19,17 +19,18 @@ var isAnagram = function(s, t) {
     sMap.set(s[i], sCount + 1)
   }
   
-  // console.log(tMap)
-  // console.log(sMap)
+  for (const [key, value] of sMap) {
+    if (tMap.get(key) != value) return false
+  }
   
-  sMap.forEach((value, key) => {
-    console.log(key + " : " + value)
-    if (tMap.get(key) != value) {
-      console.log("false!")
-      ans = false
-    }
-  })
+  // sMap.forEach((value, key) => {
+  //   console.log(key + " : " + value)
+  //   if (tMap.get(key) != value) {
+  //     console.log("false!")
+  //     ans = false
+  //   }
+  // })
   
-  return ans
+  return true
   
 };
