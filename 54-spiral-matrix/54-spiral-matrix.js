@@ -17,19 +17,16 @@ var spiralOrder = function(matrix) {
     for (let i = c1; i <= c2; i++) {
       ans.push(matrix[r1][i])
     }
-    if (ans.length == size) break
     r1++
-    for (let i = r1; i <= r2; i++) {
+    for (let i = r1; i <= r2 && ans.length < size; i++) {
       ans.push(matrix[i][c2])
     }
-    if (ans.length == size) break
     c2--
-    for (let i = c2; i >= c1; i--) {
+    for (let i = c2; i >= c1 && ans.length < size; i--) {
       ans.push(matrix[r2][i])
     }
-    if (ans.length == size) break
     r2--
-    for (let i = r2; i >= r1; i--) {
+    for (let i = r2; i >= r1 && ans.length < size; i--) {
       ans.push(matrix[i][c1])
     }
     c1++ 
