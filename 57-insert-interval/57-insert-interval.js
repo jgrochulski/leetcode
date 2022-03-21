@@ -22,14 +22,5 @@ var insert = function(intervals, newInterval) {
       
     }
   }
-
   return left.concat([[start, end]].concat(right))
-  
-  
 };
-
-/*
-1,3 7,9
-4,6
-
-*/
