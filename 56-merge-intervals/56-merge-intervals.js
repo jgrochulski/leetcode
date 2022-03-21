@@ -14,7 +14,6 @@ var merge = function(intervals1) {
   let end = intervals[0][1]
   
   const left = []
-  const right = []
   
   for (let i = 1; i < intervals.length; i++) {
     if (end >= intervals[i][0]) {
