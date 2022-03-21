@@ -4,8 +4,21 @@
  * @return {number[][]}
  */
 var insert = function(intervals, newInterval) {
+  
   let start = newInterval[0]
   let end = newInterval[1]
+  
+  if (intervals.length === 0) {
+    return [newInterval]
+  }
+  
+  if (end < intervals[0][0]) {
+    return [newInterval].concat(intervals)
+  }
+  if (start > intervals[intervals.length - 1][1]) {
+    return intervals.concat([newInterval])
+  }
+  
   const left = []
   const right = [] 
   
