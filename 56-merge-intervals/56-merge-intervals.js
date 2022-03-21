@@ -10,8 +10,6 @@ var merge = function(intervals1) {
     return a[0] - b[0]
   })
   
-  console.log(intervals)
-  
   let start = intervals[0][0]
   let end = intervals[0][1]
   
@@ -28,9 +26,5 @@ var merge = function(intervals1) {
       end = intervals[i][1]
     }
   }
-  left.push[start, end]
-  
   return [...left, [start, end]]
-  console.log([start, end])
-  
 };
