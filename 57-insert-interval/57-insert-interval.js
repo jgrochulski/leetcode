@@ -22,12 +22,7 @@ var insert = function(intervals, newInterval) {
       
     }
   }
-  
-  console.log(left)
-  console.log([start, end])
-  console.log(right)
-  
-  
+
   return left.concat([[start, end]].concat(right))
   
   
