@@ -6,8 +6,8 @@
 var insert = function(intervals, newInterval) {
   let start = newInterval[0]
   let end = newInterval[1]
-  let left = []
-  let right = [] 
+  const left = []
+  const right = [] 
   
   for (let i = 0; i < intervals.length; i++) {
     if (start > intervals[i][1]) {
