@@ -23,6 +23,7 @@ var maxDepth = function(node) {
     else {
       return rMax + 1
     }
+    
   }
 };
 
