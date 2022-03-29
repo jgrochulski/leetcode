@@ -8,9 +8,9 @@ var canFinish = function(numCourses, prerequisites) {
 
   const map = {}
   
-  for (let i = 0; i <= numCourses; i++) {
-    map[i] = []
-  }
+  // for (let i = 0; i <= numCourses; i++) {
+  //   map[i] = []
+  // }
 
   for (const course of prerequisites) {
     if (map[course[0]]) {
@@ -27,7 +27,7 @@ var canFinish = function(numCourses, prerequisites) {
   
   function dfs(course) {
     // console.log(course)
-    if (map[course].length === 0) return true
+    if (!map[course] || map[course].length === 0) return true
     
     if (set.has(course)) return false
     
