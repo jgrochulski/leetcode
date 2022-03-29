@@ -38,7 +38,7 @@ var canFinish = function(numCourses, prerequisites) {
     }
     
     set.delete(course)
-    map[course] = []
+    delete map[course]
     
     return true
   }
