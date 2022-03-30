@@ -7,10 +7,10 @@ var removeDuplicates = function(nums) {
   
   let len = nums.length
   
-  let i = 0
+  let i = 1
   
-  while (nums[i] <= nums[i+1] && i < len) {
-    if (nums[i] === nums[i+1]) {
+  while (i < len) {
+    if (nums[i] === nums[i-1]) {
       nums.push(...nums.splice(i, 1))
       len--
     }
@@ -19,5 +19,5 @@ var removeDuplicates = function(nums) {
     }
   }
   
-  return i + 1
+  return i
 };
