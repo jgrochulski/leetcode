@@ -18,8 +18,6 @@ var isValidBST = function(root) {
     
     function dfs(node, l, r) {
       if (!node) return true
-      console.log(node.val)
-      
       if (node.val > l && node.val < r) {
         return (dfs(node.left, l, node.val) &&
         dfs(node.right, node.val, r))
