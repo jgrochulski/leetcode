@@ -2,28 +2,32 @@
  * @param {number[][]} intervals
  * @return {number[][]}
  */
-var merge = function(intervals1) {
+var merge = function(intervals) {
   
-  if (intervals1.legnth === 1) return intervals
+  if (intervals.legnth === 1) return intervals
   
-  const intervals = intervals1.sort((a, b) => {
+  intervals.sort((a, b) => {
     return a[0] - b[0]
   })
-  
-  let start = intervals[0][0]
-  let end = intervals[0][1]
-  
-  const left = []
-  
-  for (let i = 1; i < intervals.length; i++) {
-    if (end >= intervals[i][0]) {
-      end = Math.max(end, intervals[i][1])
-    }
-    else {
-      left.push([start, end])
-      start = intervals[i][0]
-      end = intervals[i][1]
+  // console.log(intervals)
+  merge(intervals)
+  // console.log(intervals)
+
+
+  function merge(intervals) {
+    const arr = []
+
+    let i = 0;
+
+    while (i < intervals.length - 1) {
+      if (intervals[i][1] >= intervals[i+1][0]) {
+        intervals[i][1] = Math.max(intervals[i][1], intervals[i+1][1])
+        intervals.splice(i+1, 1)
+      }
+      else {
+        i++
+      }
     }
   }
-  return [...left, [start, end]]
+  return intervals
 };
