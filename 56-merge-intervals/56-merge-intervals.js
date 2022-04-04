@@ -9,10 +9,8 @@ var merge = function(intervals) {
   intervals.sort((a, b) => {
     return a[0] - b[0]
   })
-  // console.log(intervals)
+  
   merge(intervals)
-  // console.log(intervals)
-
 
   function merge(intervals) {
     const arr = []
