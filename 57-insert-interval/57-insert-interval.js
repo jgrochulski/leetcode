@@ -11,12 +11,11 @@ var insert = function(intervals, newInterval) {
   if (intervals.length === 0) {
     return [newInterval]
   }
-  
   if (end < intervals[0][0]) {
-    return [newInterval].concat(intervals)
+    return [newInterval, ...intervals]
   }
   if (start > intervals[intervals.length - 1][1]) {
-    return intervals.concat([newInterval])
+    return [...intervals, newInterval]
   }
   
   const left = []
@@ -35,5 +34,6 @@ var insert = function(intervals, newInterval) {
       
     }
   }
-  return left.concat([[start, end]].concat(right))
+  return [...left, [start, end], ...right]
+  
 };
