@@ -13,8 +13,6 @@ var lengthOfLIS = function(nums) {
     }
   }
   
-  console.log(dp)
-  
   let max = 0
   
   for (const len of dp) {
