@@ -6,11 +6,10 @@ var canJump = function(nums) {
   const dp = new Array(nums.length).fill(false)
   dp[nums.length - 1] = true
   
-  console.log(dp)
+  // console.log(dp)
   
   for (let i = nums.length - 2; i >= 0; i--) {
-    let jumps = nums[i]
-    for (let j = 1; j <= jumps; j++) {
+    for (let j = 1; j <= nums[i]; j++) {
       if (dp[i + j] === true) {
         dp[i] = true
         break
@@ -18,7 +17,7 @@ var canJump = function(nums) {
     }
   }
   
-  console.log(dp)
+  // console.log(dp)
   
   return dp[0]
 };
