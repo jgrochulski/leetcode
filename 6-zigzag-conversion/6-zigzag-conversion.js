@@ -28,6 +28,6 @@ var convert = function(s, numRows) {
       else row --
     }
   }
-  console.log(rowHolder)
+  
   return rowHolder.join("")
 };
